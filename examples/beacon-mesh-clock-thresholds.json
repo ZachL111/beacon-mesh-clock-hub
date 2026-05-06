@@ -1,0 +1,17 @@
+{
+  "repo": "beacon-mesh-clock-hub",
+  "thresholds": {
+    "signal": 2,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 4,
+    "ship": 175,
+    "watch": 100
+  },
+  "terms": [
+    "quorum health",
+    "lease drift",
+    "replica lag",
+    "membership churn"
+  ]
+}
