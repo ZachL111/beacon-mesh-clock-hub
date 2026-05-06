@@ -1,0 +1,73 @@
+{
+  "repo": "beacon-mesh-clock-hub",
+  "language": "SQL",
+  "category": "Distributed systems",
+  "goal": "Implement an SQL distributed systems project for clock graph analysis, using node-edge fixtures and cycle and reachability reports.",
+  "review_model": {
+    "terms": [
+      "quorum health",
+      "lease drift",
+      "replica lag",
+      "membership churn"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "quorum health",
+      "signal": 75,
+      "slack": 44,
+      "drag": 23,
+      "confidence": 62,
+      "score": 187,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "lease drift",
+      "signal": 52,
+      "slack": 23,
+      "drag": 17,
+      "confidence": 86,
+      "score": 162,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replica lag",
+      "signal": 67,
+      "slack": 46,
+      "drag": 30,
+      "confidence": 67,
+      "score": 157,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "membership churn",
+      "signal": 51,
+      "slack": 36,
+      "drag": 14,
+      "confidence": 50,
+      "score": 146,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "quorum health",
+      "signal": 77,
+      "slack": 36,
+      "drag": 13,
+      "confidence": 58,
+      "score": 209,
+      "lane": "ship"
+    }
+  ]
+}
